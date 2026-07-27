@@ -37,17 +37,7 @@ export default function ReachOut() {
     return;
   }
 
-  const body = [
-    "Hi Amarjit,",
-    "",
-    message,
-    "",
-    `From: ${senderEmail}`,
-    "",
-    "Best regards,",
-  ].join("\n");
-
-  const mailtoLink = `mailto:jeetviz90@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const mailtoLink = `mailto:jeetviz90@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
 
   window.location.href = mailtoLink;
 };
