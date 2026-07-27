@@ -1,9 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import { profile } from "../data/resumeData";
 
+const initialFormState = {
+  email: "",
+  subject: "",
+  message: "",
+};
+
 export default function ReachOut() {
-  const subject = encodeURIComponent("Portfolio inquiry");
-  const body = encodeURIComponent(`Hi Amarjit,\n\nI came across your portfolio and would love to connect.\n\nBest regards,\n`);
+  const [formData, setFormData] = useState(initialFormState);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const senderEmail = (formData.email || "").trim();
+  const subject = (formData.subject || "").trim();
+  const message = (formData.message || "").trim();
+
+  if (!senderEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(senderEmail)) {
+    alert("Please enter a valid email.");
+    return;
+  }
+
+  if (!subject) {
+    alert("Please enter a subject.");
+    return;
+  }
+
+  if (!message) {
+    alert("Please enter a message.");
+    return;
+  }
+
+  const body = [
+    "Hi Amarjit,",
+    "",
+    message,
+    "",
+    `From: ${senderEmail}`,
+    "",
+    "Best regards,",
+  ].join("\n");
+
+  const mailtoLink = `mailto:jeetviz90@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailtoLink;
+};
 
   return (
     <section id="reach-out" className="reach-out-section">
@@ -15,7 +62,10 @@ export default function ReachOut() {
         </div>
 
         <div className="reach-out-actions">
-          <a className="primary-action" href={`mailto:${profile.email}?subject=${subject}&body=${body}`}>
+          <a
+            className="primary-action"
+            href={`mailto:${profile.email}?subject=${encodeURIComponent("Portfolio inquiry")}&body=${encodeURIComponent("Hi Amarjit,\n\nI came across your portfolio and would love to connect.\n\nBest regards,\n")}`}
+          >
             Start a conversation
           </a>
           <a className="secondary-action" href="/Amarjit_Singh_Sodhi_Resume.pdf" download>
@@ -23,18 +73,38 @@ export default function ReachOut() {
           </a>
         </div>
 
-        <form className="reach-out-form" onSubmit={(e) => e.preventDefault()}>
+        <form className="reach-out-form" onSubmit={handleSubmit}>
           <label>
             <span>Email</span>
-            <input type="email" placeholder="you@example.com" />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="you@example.com"
+              required
+            />
           </label>
           <label>
             <span>Subject</span>
-            <input type="text" placeholder="Project idea / opportunity" />
+            <input
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              placeholder="Project idea / opportunity"
+            />
           </label>
           <label>
             <span>Message</span>
-            <textarea rows="4" placeholder="Tell me a bit about the project or opportunity..." />
+            <textarea
+              rows="4"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Tell me a bit about the project or opportunity..."
+              required
+            />
           </label>
           <button type="submit">Let’s Connect</button>
         </form>
