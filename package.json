@@ -20,5 +20,17 @@
     "@vitejs/plugin-react": "^4.2.1",
     "gh-pages": "^6.3.0",
     "vite": "^5.1.0"
+  },
+  "description": "A single-page React portfolio generated from the resume, styled as a dark, IDE-inspired console (Kotlin purple + Android green accents on a code-editor dark background).",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/software-deviser/amarjit.singh.sodhi.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/software-deviser/amarjit.singh.sodhi.github.io/issues"
   }
 }

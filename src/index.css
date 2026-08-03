@@ -109,6 +109,7 @@ a {
   scrollbar-width: none;
   margin-top: 10px;
   box-shadow: 0 8px 24px rgba(2, 6, 23, 0.18);
+  scroll-behavior: smooth;
 }
 .tabbar::-webkit-scrollbar {
   display: none;

@@ -1,7 +1,7 @@
 export const profile = {
   name: "Amarjit Singh Sodhi",
   title: "Team Lead | Senior Android & Flutter Developer",
-  location: "Kharar, Punjab",
+  location: "Mohali, Punjab",
   email: "jeetviz90@gmail.com",
   phone: "+91 88725 19493",
   linkedin: "https://www.linkedin.com/in/amarjit-singh-sodhi-51178b16a/",
@@ -9,9 +9,9 @@ export const profile = {
 };
 
 export const summary = [
-  "5+ years building Android and Flutter products that are reliable, scalable, and ready for production.",
-  "Experienced in native Android, cross-platform apps, architecture design, mentoring, and product delivery.",
-  "Known for turning complex requirements into clean, maintainable mobile experiences with strong technical ownership.",
+  "Experienced Android and Flutter engineer with a strong track record in building scalable, production-ready mobile products.",
+  "Worked across native Android, cross-platform apps, architecture design, team leadership, and delivery for product-focused teams.",
+  "Brings hands-on experience in AR, AI, Android TV, NFC, and media-driven applications.",
 ];
 
 export const experience = [
@@ -21,9 +21,9 @@ export const experience = [
     location: "Mohali, Punjab",
     title: "Team Lead | Senior Android and Flutter Developer",
     points: [
-      "Led Android and Flutter delivery as Team Lead for client-facing products from concept to launch.",
-      "Mentored developers and improved team execution through code reviews, architecture guidance, and technical support.",
-      "Built solutions across AR, AI, Android TV, digital signage, NFC, and face recognition.",
+      "Leading mobile product delivery as a technical lead for Android and Flutter applications from concept to launch.",
+      "Mentoring engineers, guiding architecture decisions, and improving team productivity through code reviews and hands-on support.",
+      "Building solutions across AR, AI, Android TV, digital signage, NFC, face recognition, and media streaming experiences.",
     ],
   },
   {
@@ -32,19 +32,19 @@ export const experience = [
     location: "Mohali, Punjab",
     title: "Senior Android and Flutter Developer",
     points: [
-      "Delivered native Android and Flutter apps with clean architecture and strong API integration.",
-      "Applied MVVM, testing, and performance optimization to improve stability and maintainability.",
-      "Mentored interns and helped shape a stronger engineering culture within the team.",
+      "Delivered scalable Android and Flutter applications with strong architecture, API integration, and maintainability.",
+      "Applied MVVM, testing, and performance optimization to improve product quality and stability.",
+      "Mentored interns and contributed to stronger engineering practices and team collaboration.",
     ],
   },
   {
     company: "Zero2unicorn Labs Pvt Ltd",
     date: "Nov 2021 - Jun 2022",
     location: "Mohali, Punjab",
-    title: "Senior Android And Flutter Developer",
+    title: "Senior Android and Flutter Developer",
     points: [
-      "Advanced to Senior Android and Flutter Developer through consistent delivery and ownership.",
-      "Contributed to planning and execution for early product development work.",
+      "Advanced into a senior engineering role through strong ownership, execution, and product delivery.",
+      "Contributed to planning, implementation, and iterative development for early-stage mobile products.",
     ],
   },
   {
@@ -53,8 +53,8 @@ export const experience = [
     location: "Mohali, Punjab",
     title: "Android Developer",
     points: [
-      "Built native Android apps from scratch using MVC and MVP patterns.",
-      "Strengthened UI implementation skills through hands-on product and mockup work.",
+      "Built native Android apps from scratch using MVC and MVP-based app structures.",
+      "Strengthened UI implementation, product thinking, and delivery execution through hands-on development experience.",
     ],
   },
 ];
@@ -78,6 +78,9 @@ export const skillGroups = [
     skills: [
       "Android SDK",
       "Flutter",
+      "Jetpack Compose",
+      "Material3",
+      "Jetpack Components",
       "MVVM",
       "Clean Architecture",
       "Repository Pattern",
@@ -98,12 +101,27 @@ export const skillGroups = [
   },
   {
     label: "Platforms & Tools",
-    skills: ["Firebase", "REST APIs", "JSON", "Git", "GitHub", "Postman", "Jira", "Android Studio", "VS Code"],
+    skills: [
+      "Firebase",
+      "REST APIs",
+      "JSON",
+      "Git",
+      "GitHub",
+      "Postman",
+      "Jira",
+      "Android Studio",
+      "VS Code",
+      "Claude",
+      "Google Gemini",
+      "Google Cloud Console",
+      "Play Console",
+      "App Store Connect",
+    ],
   },
   {
     label: "Practice & Leadership",
     skills: [
-      "AI-driven Development",
+      "AI-assisted Development",
       "Performance Optimization",
       "Agile",
       "SDLC",
@@ -118,49 +136,49 @@ export const skillGroups = [
 export const projects = [
   {
     name: "Remotely",
-    date: "05/2025 – 12/2025",
+    date: "2024 - Present",
     points: [
-      "Delivered an AR measurement utility that improved accuracy and usability over manual estimation.",
-      "Led R&D for ARCore, 3D modeling, and sensor-based plane detection and measurement rendering.",
+      "Delivered an AR-based measurement utility that improved accuracy and usability compared to manual estimation.",
+      "Led research and implementation work around ARCore, 3D interaction, scene analysis, and precise measurement rendering.",
     ],
   },
   {
     name: "SpotX",
     link: "https://play.google.com/store/apps/details?id=com.codknox.spotxapp&pcampaignid=web_share",
-    date: "02/2026 – Present",
+    date: "2024 - Present",
     points: [
-      "Built a digital signage app for Android boxes and TVs with strong device compatibility.",
-      "Solved playback and hardware issues through Media3 optimization and device-level R&D.",
-      "Integrated AI-based audience analytics using Camera2 and real-time recognition workflows.",
+      "Built a digital signage application for Android boxes and TVs with strong compatibility and playback reliability.",
+      "Resolved performance and hardware issues through Media3 optimization and device-level debugging.",
+      "Integrated AI-driven audience analytics using Camera2 and real-time recognition workflows.",
     ],
   },
   {
     name: "GetWetap - NFC Business Card",
     link: "https://play.google.com/store/apps/details?id=com.zimblecode.wetap&pcampaignid=web_share",
-    date: "07/2025 – 12/2023",
+    date: "2023 - 2024",
     points: [
-      "Led a smart business card app with NFC and QR-based contact sharing.",
-      "Resolved Android integration issues to ensure smooth tap-to-share experiences.",
-      "Built the product with Flutter, Firebase, and Google APIs for secure profile sharing.",
+      "Led a smart business card app with NFC and QR-based contact sharing experiences.",
+      "Resolved Android integration issues and delivered a smooth tap-to-share flow for end users.",
+      "Built the product with Flutter, Firebase, and Google APIs for secure and modern profile sharing.",
     ],
   },
   {
     name: "GIGGO",
     link: "https://play.google.com/store/apps/details?id=ng.giglogistics.giglgo&pcampaignid=web_share",
-    date: "05/2025 – 03/2026",
+    date: "2022 - 2024",
     points: [
-      "Led Android development for a cross-border logistics platform serving multiple regions.",
-      "Managed a major app revamp and migration while keeping operations stable.",
-      "Delivered QR-based shipment tracking and payment workflows with strong client collaboration.",
+      "Led Android development for a cross-border logistics platform serving multiple regions and operational workflows.",
+      "Managed a major app revamp and migration while keeping key logistics operations stable and reliable.",
+      "Delivered QR-based shipment tracking and payment workflows with strong client collaboration and product focus.",
     ],
   },
   {
     name: "Furtrieve Community",
     link: "https://play.google.com/store/apps/details?id=com.furtrievecommunity.fcapp&pcampaignid=web_share",
-    date: "09/2025 – 01/2026",
+    date: "2023 - 2024",
     points: [
-      "Built a social app for pet communities with group discovery and local engagement features.",
-      "Coordinated delivery through strong team communication and time management under tight timelines.",
+      "Built a community app for pet owners with discovery, group engagement, and local interactions.",
+      "Coordinated delivery through strong team communication and time management during fast-moving product cycles.",
     ],
   },
 ];

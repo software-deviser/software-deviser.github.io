@@ -1,35 +1,69 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const TABS = [
   { id: "summary", label: "summary.md" },
-  { id: "experience", label: "experience.kt" },
-  { id: "projects", label: "projects.dart" },
   { id: "skills", label: "skills.json" },
+  { id: "projects", label: "projects.dart" },
+  { id: "experience", label: "experience.kt" },
   { id: "education", label: "education.md" },
   { id: "reach-out", label: "reach-out.txt" },
 ];
 
 export default function TabBar() {
   const [active, setActive] = useState("summary");
+  const tabRefs = useRef({});
+  const navRef = useRef(null);
 
   useEffect(() => {
     const sections = TABS.map((t) => document.getElementById(t.id)).filter(Boolean);
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        });
-      },
-      { rootMargin: "-30% 0px -60% 0px" }
-    );
-    sections.forEach((s) => observer.observe(s));
-    return () => observer.disconnect();
+
+    if (sections.length === 0) return;
+
+    const updateActiveSection = () => {
+      const scrollY = window.scrollY + 140;
+      let current = sections[0].id;
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop) {
+          current = section.id;
+        }
+      });
+
+      setActive(current);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, []);
 
+  useEffect(() => {
+    const activeTab = tabRefs.current[active];
+    const nav = navRef.current;
+
+    if (!activeTab || !nav) return;
+
+    const navRect = nav.getBoundingClientRect();
+    const tabRect = activeTab.getBoundingClientRect();
+
+    if (tabRect.left < navRect.left || tabRect.right > navRect.right) {
+      activeTab.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }
+  }, [active]);
+
   return (
-    <nav className="tabbar" aria-label="Section navigation">
+    <nav ref={navRef} className="tabbar" aria-label="Section navigation">
       {TABS.map((t) => (
         <a
+          ref={(node) => {
+            tabRefs.current[t.id] = node;
+          }}
           key={t.id}
           href={`#${t.id}`}
           className={`tab${active === t.id ? " active" : ""}`}

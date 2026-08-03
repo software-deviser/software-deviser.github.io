@@ -2,9 +2,9 @@ import React from "react";
 import Hero from "./components/Hero";
 import TabBar from "./components/TabBar";
 import Summary from "./components/Summary";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Footer from "./components/Footer";
 import ReachOut from "./components/ReachOut";
@@ -15,9 +15,9 @@ export default function App() {
       <Hero />
       <TabBar />
       <Summary />
-      <Experience />
-      <Projects />
       <Skills />
+      <Projects />
+      <Experience />
       <Education />
       <ReachOut />
       <Footer />
