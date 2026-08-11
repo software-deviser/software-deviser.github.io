@@ -1,24 +1,28 @@
 import React from "react";
-import { profile, projects } from "../data/resumeData";
+import { profile } from "../data/resumeData";
 
 export default function Hero() {
   return (
     <header className="hero" id="top">
       <div className="hero-copy">
-        <div className="status-line">
-          <span className="status-dot" />
-          <span>available for opportunities</span>
-        </div>
+        <div className="status-pill">Open to exciting opportunities- Mobile App Developer | Software Engineer</div>
 
         <h1 className="hero-name">{profile.name}</h1>
 
-        <div className="hero-title">
-          Team Lead <span className="sep">/</span> Senior Android &amp; Flutter Developer
-        </div>
+        <div className="hero-title">I design and build Android &amp; Flutter products that are fast, reliable, and built to scale.</div>
 
         <p className="hero-summary">
-          5+ years of experience in Mobile App Development with Android and Flutter, building scalable products with strong architecture and refined user experiences.
+          I bring 5+ years of experience delivering customer-facing mobile products across Android TV, logistics, AR, AI, NFC, and digital signage — combining strong architecture with hands-on execution.
         </p>
+
+        <div className="hero-actions">
+          <a className="primary-action" href="#projects">
+            See selected work
+          </a>
+          <a className="secondary-action" href="#reach-out">
+            Let&apos;s connect
+          </a>
+        </div>
 
         <div className="hero-contact">
           <span>{profile.location}</span>
@@ -35,8 +39,28 @@ export default function Hero() {
 
       <div className="hero-visual" aria-hidden="true">
         <div className="hero-card">
-          <div className="card-pill">Mobile app engineering</div>
-          <img src="./mobile-app-illustration.svg" alt="Illustration representing Android and Flutter mobile app development" />
+          <div className="card-pill">Impact snapshot</div>
+          <div className="hero-highlights">
+            <div className="highlight-item">
+              <strong>500K+</strong>
+              <span>install base supported</span>
+            </div>
+            <div className="highlight-item">
+              <strong>1,000+</strong>
+              <span>Android TV screens deployed</span>
+            </div>
+            <div className="highlight-item">
+              <strong>20–35%</strong>
+              <span>crash reduction delivered</span>
+            </div>
+            <div className="highlight-item">
+              <strong>4+ yrs</strong>
+              <span>in Flutter development</span>
+            </div>
+          </div>
+          <div className="hero-quote">
+            From architecture to rollout, I help teams ship products that stay dependable under real-world pressure.
+          </div>
         </div>
       </div>
     </header>

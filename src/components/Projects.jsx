@@ -3,8 +3,14 @@ import { projects } from "../data/resumeData";
 
 export default function Projects() {
   return (
-    <section id="projects">
-      <div className="section-label">projects</div>
+    <section id="projects" className="section-block">
+      <div className="section-header">
+        <div className="section-label">Selected work</div>
+        <p className="section-intro">
+          A snapshot of building experiences across AR, AI, Android TV, NFC, logistics, media, and community-focused products.
+        </p>
+      </div>
+
       <div className="projects-grid">
         {projects.map((p) => (
           <div className="project-card" key={p.name}>
@@ -18,7 +24,6 @@ export default function Projects() {
                   p.name
                 )}
               </span>
-              <span className="project-date">{p.date}</span>
             </div>
             <ul>
               {p.points.map((pt, i) => (

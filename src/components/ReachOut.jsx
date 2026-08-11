@@ -16,51 +16,57 @@ export default function ReachOut() {
   };
 
   const handleSubmit = (event) => {
-  event.preventDefault();
+    event.preventDefault();
 
-  const senderEmail = (formData.email || "").trim();
-  const subject = (formData.subject || "").trim();
-  const message = (formData.message || "").trim();
+    const senderEmail = (formData.email || "").trim();
+    const subject = (formData.subject || "").trim();
+    const message = (formData.message || "").trim();
 
-  if (!senderEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(senderEmail)) {
-    alert("Please enter a valid email.");
-    return;
-  }
+    if (!senderEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(senderEmail)) {
+      alert("Please enter a valid email.");
+      return;
+    }
 
-  if (!subject) {
-    alert("Please enter a subject.");
-    return;
-  }
+    if (!subject) {
+      alert("Please enter a subject.");
+      return;
+    }
 
-  if (!message) {
-    alert("Please enter a message.");
-    return;
-  }
+    if (!message) {
+      alert("Please enter a message.");
+      return;
+    }
 
-  const mailtoLink = `mailto:jeetviz90@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    const mailtoLink = `mailto:jeetviz90@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
 
-  window.location.href = mailtoLink;
-};
+    window.location.href = mailtoLink;
+  };
 
   return (
-    <section id="reach-out" className="reach-out-section">
-      <div className="section-label">reach out</div>
+    <section id="reach-out" className="section-block">
+      <div className="section-header">
+        <div className="section-label">Contact</div>
+        <p className="section-intro">
+          Open to thoughtful collaborations, product leadership conversations, and ambitious mobile builds.
+        </p>
+      </div>
+
       <div className="reach-out-card">
         <div className="reach-out-copy">
-          <h3>Let’s build something meaningful.</h3>
+          <h3>Let&apos;s build something meaningful.</h3>
           <p>Open to collaborations, leadership opportunities, and mobile product conversations.</p>
-        </div>
 
-        <div className="reach-out-actions">
-          <a
-            className="primary-action"
-            href={`mailto:${profile.email}?subject=${encodeURIComponent("Portfolio inquiry")}&body=${encodeURIComponent("Hi Amarjit,\n\nI came across your portfolio and would love to connect.\n\nBest regards,\n")}`}
-          >
-            Start a conversation
-          </a>
-          <a className="secondary-action" href="/Amarjit_Singh_Sodhi_Resume.pdf" download>
-            Download Resume
-          </a>
+          <div className="reach-out-actions">
+            <a
+              className="primary-action"
+              href={`mailto:${profile.email}?subject=${encodeURIComponent("Portfolio inquiry")}&body=${encodeURIComponent("Hi Amarjit,\n\nI came across your portfolio and would love to connect.\n\nBest regards,\n")}`}
+            >
+              Start a conversation
+            </a>
+            <a className="secondary-action" href="/Amarjit_Singh_Sodhi_Resume.pdf" download>
+              Download Resume
+            </a>
+          </div>
         </div>
 
         <form className="reach-out-form" onSubmit={handleSubmit}>
@@ -96,7 +102,7 @@ export default function ReachOut() {
               required
             />
           </label>
-          <button type="submit">Let’s Connect</button>
+          <button type="submit">Let&apos;s Connect</button>
         </form>
       </div>
     </section>

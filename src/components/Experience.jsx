@@ -3,8 +3,14 @@ import { experience } from "../data/resumeData";
 
 export default function Experience() {
   return (
-    <section id="experience">
-      <div className="section-label">work experience</div>
+    <section id="experience" className="section-block">
+      <div className="section-header">
+        <div className="section-label">Career journey</div>
+        <p className="section-intro">
+          My journey has evolved from building Android apps to leading cross-platform products and mentoring teams with stronger architecture choices.
+        </p>
+      </div>
+
       {experience.map((job) => (
         <div className="entry" key={job.company + job.date}>
           <div className="entry-meta">

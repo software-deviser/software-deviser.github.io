@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const TABS = [
-  { id: "summary", label: "summary.md" },
-  { id: "skills", label: "skills.json" },
-  { id: "projects", label: "projects.dart" },
-  { id: "experience", label: "experience.kt" },
-  { id: "education", label: "education.md" },
-  { id: "reach-out", label: "reach-out.txt" },
+  { id: "summary", label: "Vision" },
+  { id: "skills", label: "Stack" },
+  { id: "projects", label: "Work" },
+  { id: "experience", label: "Journey" },
+  { id: "education", label: "Background" },
+  { id: "reach-out", label: "Contact" },
 ];
 
 export default function TabBar() {

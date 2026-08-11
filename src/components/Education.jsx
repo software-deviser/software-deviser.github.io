@@ -3,8 +3,14 @@ import { education, languages } from "../data/resumeData";
 
 export default function Education() {
   return (
-    <section id="education">
-      <div className="section-label">education</div>
+    <section id="education" className="section-block">
+      <div className="section-header">
+        <div className="section-label">Background</div>
+        <p className="section-intro">
+          I hold a B.Tech in Computer Science and combine strong engineering fundamentals with practical product delivery and collaboration.
+        </p>
+      </div>
+
       {education.map((edu) => (
         <div className="entry" key={edu.company}>
           <div className="entry-meta">
@@ -21,7 +27,7 @@ export default function Education() {
         </div>
       ))}
 
-      <div className="skill-group" style={{ marginTop: 34 }}>
+      <div className="languages-card">
         <div className="skill-group-label">Languages</div>
         <div className="languages-row">
           {languages.map((l) => (
