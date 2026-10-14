@@ -7,7 +7,7 @@ export default function Projects() {
       <div className="section-header">
         <div className="section-label">Selected work</div>
         <p className="section-intro">
-          A snapshot of building experiences across AR, AI, Android TV, NFC, logistics, media, and community-focused products.
+          A snapshot of mobile products across Android TV digital signage, AI-assisted audience insights, AR measurement, and NFC-based digital identity.
         </p>
       </div>
 
@@ -25,6 +25,15 @@ export default function Projects() {
                 )}
               </span>
             </div>
+            {p.technologies?.length > 0 && (
+              <div className="skills-row" aria-label="Technology stack">
+                {p.technologies.map((technology) => (
+                  <span className="skill-tag" key={technology}>
+                    {technology}
+                  </span>
+                ))}
+              </div>
+            )}
             <ul>
               {p.points.map((pt, i) => (
                 <li key={i}>{pt}</li>

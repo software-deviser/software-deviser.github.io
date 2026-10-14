@@ -1,5 +1,5 @@
 import React from "react";
-import { education, languages } from "../data/resumeData";
+import { certifications, education, languages } from "../data/resumeData";
 
 export default function Education() {
   return (
@@ -7,7 +7,7 @@ export default function Education() {
       <div className="section-header">
         <div className="section-label">Background</div>
         <p className="section-intro">
-          I hold a B.Tech in Computer Science and combine strong engineering fundamentals with practical product delivery and collaboration.
+          I hold a Bachelor of Engineering in Computer Science and combine strong engineering fundamentals with practical product delivery and collaboration.
         </p>
       </div>
 
@@ -18,7 +18,7 @@ export default function Education() {
             <div className="date-loc">
               {edu.date}
               <br />
-              {edu.score}
+              {edu.location} | {edu.score}
             </div>
           </div>
           <div className="entry-body">
@@ -26,6 +26,17 @@ export default function Education() {
           </div>
         </div>
       ))}
+
+      <div className="languages-card">
+        <div className="skill-group-label">Certifications</div>
+        <div className="languages-row">
+          {certifications.map((certification) => (
+            <span className="skill-tag" key={certification}>
+              {certification}
+            </span>
+          ))}
+        </div>
+      </div>
 
       <div className="languages-card">
         <div className="skill-group-label">Languages</div>

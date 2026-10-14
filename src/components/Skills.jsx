@@ -7,7 +7,7 @@ export default function Skills() {
       <div className="section-header">
         <div className="section-label">Core capabilities</div>
         <p className="section-intro">
-          My toolkit spans Kotlin, Java, Dart, Flutter, Android SDK, Jetpack Compose, MVVM, Clean Architecture, Firebase, ARCore, and more.
+          My toolkit spans Kotlin, Java, Dart, Android and Flutter, mobile architecture, and Agentic Development with Claude Code, Gemini, and MCP.
         </p>
       </div>
 

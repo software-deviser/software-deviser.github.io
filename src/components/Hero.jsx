@@ -9,10 +9,10 @@ export default function Hero() {
 
         <h1 className="hero-name">{profile.name}</h1>
 
-        <div className="hero-title">I design and build Android &amp; Flutter products that are fast, reliable, and built to scale.</div>
+        <div className="hero-title">{profile.title}</div>
 
         <p className="hero-summary">
-          I bring 5+ years of experience delivering customer-facing mobile products across Android TV, logistics, AR, AI, NFC, and digital signage — combining strong architecture with hands-on execution.
+          I bring 6 years of experience building customer-facing Android and Flutter apps, owning architecture and delivery, mentoring engineers, and building with agentic tools such as Claude Code and MCP.
         </p>
 
         <div className="hero-actions">
